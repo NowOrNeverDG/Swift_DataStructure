@@ -19,6 +19,12 @@ class UnionFind {
         }
     }
     
+    func restruct(_ edges: [[Int]]) {
+        for arr in edges {
+            union(arr[0], arr[1])
+        }
+    }
+    
     private func find(_ p: Int) -> Int {
         if parent[p] != p {
             parent[p] = find(parent[p])
